@@ -1,17 +1,17 @@
 /**
  * Created by grizzly on 01/03/2016.
  */
-
+ 
 /**
  * Manage to operate
  * @param x
  * @param y
  * @constructor
  */
-var Calculator = function ( x, y) {
+Calculator = function (x, y) {
 
-    var x;
-    var y;
+    this.x=0;
+    this.y=0;
 
     /**
      * Set value x and y
@@ -19,8 +19,8 @@ var Calculator = function ( x, y) {
      * @return Object
      */
     this.set = function (x, y) {
-        x = parseFloat(x);
-        y = parseFloat(y);
+        this.x = parseFloat(x);
+        this.y = parseFloat(y);
         return this;
     };
 
@@ -38,7 +38,7 @@ var Calculator = function ( x, y) {
      * @return number
      */
     this.substract = function (){
-        return x - y;
+        return this.x - this.y;
     };
 
     /**
@@ -46,7 +46,7 @@ var Calculator = function ( x, y) {
      * @return number
      */
     this.multiply = function(){
-        return x * y;
+        return this.x * this.y;
     };
 
     /**
@@ -54,7 +54,7 @@ var Calculator = function ( x, y) {
      * @return number
      */
     this.divide = function(){
-        return x / y;
+        return this.x / this.y;
     };
 
     /**
@@ -62,7 +62,7 @@ var Calculator = function ( x, y) {
      * @return number
      */
     this.sum = function () {
-        return parseFloat(x) + parseFloat(y);
+        return parseFloat(this.x) + parseFloat(this.y);
     };
 
     /**
@@ -93,6 +93,7 @@ var Calculator = function ( x, y) {
 
         }
     };
-
-    this.set(x,y);
+    this.set(x, y);
+    
+    return this;
 };
