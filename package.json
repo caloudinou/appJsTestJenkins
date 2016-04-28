@@ -1,22 +1,27 @@
 {
-  "name": "demo-calculator",
+  "name": "test-app-cal",
   "version": "1.0.0",
-  "description": "demo pour la presentation du 29042016pour la présentation du mémoire.test unitaire avec mocha",
+  "description": "",
   "main": "index.js",
+  "directories": {
+    "test": "test"
+  },
   "scripts": {
     "test": "node ./node_modules/mocha/bin/mocha --recursive --ui bdd --reporter mocha-junit-reporter --reporter-options mochaFile=./target/mocha-reporter-junit.xml --colors test/*Spec.js"
   },
+  "repository": {
+    "type": "git",
+    "url": "git+https://github.com/caloudinou/appJsTestJenkins.git"
+  },
   "author": "",
   "license": "ISC",
-  "devDependencies": {
-    "istanbul": "^0.4.3",
-    "mocha": "^2.4.5",
-    "mocha-istanbul": "^0.2.0",
-    "mocha-junit-reporter": "^1.11.1",
-    "sinon": "^1.17.3"
+  "bugs": {
+    "url": "https://github.com/caloudinou/appJsTestJenkins/issues"
   },
-  "dependencies": {
-    "promise": "^7.1.1",
-    "request": "^2.72.0"
+  "homepage": "https://github.com/caloudinou/appJsTestJenkins#readme",
+  "devDependencies": {
+    "chai": "^3.5.0",
+    "mocha": "^2.4.5",
+    "mocha-junit-reporter": "^1.11.1"
   }
 }

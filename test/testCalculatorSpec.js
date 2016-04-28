@@ -4,8 +4,6 @@
 
 var chai		= require('chai');
 var expect 		= chai.expect;
-var sinon 		= require('sinon');
-var Promise		= require('promise');
 require('../js/Calculator');
 
 describe('Calculatrice', function(){
